@@ -19,3 +19,6 @@
 
 # build
 /build/
+
+# phpunit
+/.phpunit.result.cache
