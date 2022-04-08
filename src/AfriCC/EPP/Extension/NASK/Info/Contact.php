@@ -8,7 +8,7 @@ use AfriCC\EPP\Frame\Command\Info\Contact as ContactInfo;
 class Contact extends ContactInfo implements ExtensionInterface
 {
     protected $extension = 'extcon';
-    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extcon-2.0';
+    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extcon-2.1';
 
     /**
      * Set contact authinfo

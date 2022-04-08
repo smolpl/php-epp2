@@ -28,11 +28,11 @@ class ContactCreateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <command>
 <create>
 <contact:create
-xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
 <contact:id>sh8013</contact:id>
 <contact:postalInfo type="loc">
 <contact:name>John Doe</contact:name>
@@ -55,7 +55,7 @@ xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
 </create>
 <extension>
 <extcon:create
-xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
 <extcon:individual>1</extcon:individual>
 </extcon:create>
 </extension>
@@ -87,11 +87,11 @@ xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <command>
 <create>
 <contact:create
-xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
 <contact:id>sh8013</contact:id>
 <contact:postalInfo type="loc">
 <contact:name>John Doe</contact:name>
@@ -115,7 +115,7 @@ xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
 </create>
 <extension>
 <extcon:create
-xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
 <extcon:individual>0</extcon:individual>
 <extcon:consentForPublishing>1</extcon:consentForPublishing>
 </extcon:create>

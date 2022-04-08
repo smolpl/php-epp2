@@ -35,7 +35,7 @@ EOF;
     {
         $raw_data = <<< 'EOF'
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
   <response>
     <result code="1000">
       <msg lang="en">Command completed successfully</msg>
@@ -48,7 +48,7 @@ EOF;
 </epp>
 EOF;
         $objectSpec = new ObjectSpec();
-        $objectSpec->specs['epp']['xmlns'] = 'http://www.dns.pl/nask-epp-schema/epp-2.0';
+        $objectSpec->specs['epp']['xmlns'] = 'http://www.dns.pl/nask-epp-schema/epp-2.1';
 
         $import = ResponseFactory::build($raw_data, $objectSpec);
         $stub = $this->getMockForAbstractClass(AbstractFrame::class, [$import, $objectSpec]);

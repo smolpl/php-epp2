@@ -18,10 +18,10 @@ class FutureUpdateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <update>
-                  <future:update xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:update xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                     <future:chg>
                       <future:registrant>nsk001</future:registrant>

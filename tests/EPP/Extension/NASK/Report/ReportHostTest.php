@@ -14,9 +14,9 @@ class ReportHostTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <extension>
-                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
                   <extreport:host />
                 </extreport:report>
               </extension>
@@ -33,9 +33,9 @@ class ReportHostTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <extension>
-                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
                   <extreport:host>
                     <extreport:name>ns1.temp.pl</extreport:name>
                   </extreport:host>

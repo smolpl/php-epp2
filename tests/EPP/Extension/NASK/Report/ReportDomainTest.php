@@ -20,10 +20,10 @@ class ReportDomainTest extends TestCase
         $frame->setLimit(50);
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <extension>
 <extreport:report
-xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
 <extreport:domain>
 <extreport:state>STATE_REGISTERED</extreport:state>
 <extreport:exDate>2007-05-07T11:23:00.0Z</extreport:exDate>

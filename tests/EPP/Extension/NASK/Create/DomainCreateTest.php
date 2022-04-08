@@ -25,11 +25,11 @@ class DomainCreateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <command>
 <create>
 <domain:create
-xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.0">
+xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.1">
 <domain:name>' . TEST_DOMAIN . '</domain:name>
 <domain:period unit="y">1</domain:period>
 <domain:ns>ns1.' . TEST_DOMAIN . '</domain:ns>
@@ -42,7 +42,7 @@ xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.0">
 </create>
 <extension>
 <extdom:create
-xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.0">
+xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.1">
 <extdom:book/>
 </extdom:create>
 </extension>

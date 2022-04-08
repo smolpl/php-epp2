@@ -19,10 +19,10 @@ class FutureTransferTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <transfer op="request">
-                  <future:transfer xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:transfer xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                     <future:authInfo>
                       <future:pw>password</future:pw>
@@ -30,7 +30,7 @@ class FutureTransferTest extends TestCase
                   </future:transfer>
                 </transfer>
                 <extension>
-                  <extfut:transfer xmlns:extfut="http://www.dns.pl/nask-epp-schema/extfut-2.0">
+                  <extfut:transfer xmlns:extfut="http://www.dns.pl/nask-epp-schema/extfut-2.1">
                     <extfut:resendConfirmationRequest/>
                   </extfut:transfer>
                 </extension>
@@ -51,10 +51,10 @@ class FutureTransferTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <transfer op="request">
-                  <future:transfer xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:transfer xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                     <future:authInfo>
                       <future:pw roid="1234-NASK">password</future:pw>

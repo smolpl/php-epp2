@@ -15,10 +15,10 @@ class ReportTest extends TestCase
         $frame->setLimit(50);
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <extension>
 <extreport:report
-xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
 <extreport:offset>0</extreport:offset>
 <extreport:limit>50</extreport:limit>
 </extreport:report>

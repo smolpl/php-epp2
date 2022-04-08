@@ -9,7 +9,7 @@ use AfriCC\EPP\Validator;
 class Domain extends DomainCreate implements ExtensionInterface
 {
     protected $extension = 'extdom';
-    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extdom-2.0';
+    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extdom-2.1';
 
     public function setBook()
     {

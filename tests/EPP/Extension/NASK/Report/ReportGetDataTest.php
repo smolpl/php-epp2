@@ -15,9 +15,9 @@ class ReportGetDataTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <extension>
-                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+                <extreport:report xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
                   <extreport:getData>
                     <extreport:extreportId>58ab3bd1-fcce-4c03-b159-8af5f1adb447</extreport:extreportId>
                   </extreport:getData>

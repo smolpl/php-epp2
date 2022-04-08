@@ -18,10 +18,10 @@ class ReportPrepaidTest extends TestCase
         $frame->setLimit(50);
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <extension>
 <extreport:report
-xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
 <extreport:prepaid>
 <extreport:payment>
 <extreport:accountType>domain</extreport:accountType>
@@ -44,10 +44,10 @@ xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
         $frame->setFundsAccountType('DOMAIN');
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <extension>
 <extreport:report
-xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
 <extreport:prepaid>
 <extreport:paymentFunds>
 <extreport:accountType>DOMAIN</extreport:accountType>
@@ -68,10 +68,10 @@ xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
         $frame->setFundsAccountType('ENUM');
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+<epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
 <extension>
 <extreport:report
-xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.0">
+xmlns:extreport="http://www.dns.pl/nask-epp-schema/extreport-2.1">
 <extreport:prepaid>
 <extreport:paymentFunds>
 <extreport:accountType>ENUM</extreport:accountType>

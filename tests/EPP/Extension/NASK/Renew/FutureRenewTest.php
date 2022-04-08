@@ -18,10 +18,10 @@ class FutureRenewTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <renew>
-                  <future:renew xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:renew xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                     <future:curExpDate>2017-04-25</future:curExpDate>
                     <future:period unit="y">3</future:period>

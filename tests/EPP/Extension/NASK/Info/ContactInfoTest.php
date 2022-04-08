@@ -16,15 +16,15 @@ class ContactInfoTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <info>
-                  <contact:info xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+                  <contact:info xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
                     <contact:id>666666</contact:id>
                   </contact:info>
                 </info>
                 <extension>
-                  <extcon:info xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+                  <extcon:info xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
                     <extcon:authInfo>
                       <extcon:pw>2fooBAR</extcon:pw>
                     </extcon:authInfo>
@@ -44,15 +44,15 @@ class ContactInfoTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <info>
-                  <contact:info xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+                  <contact:info xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
                     <contact:id>666666</contact:id>
                   </contact:info>
                 </info>
                 <extension>
-                  <extcon:info xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+                  <extcon:info xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
                     <extcon:authInfo>
                       <extcon:pw roid="1234-NASK">2fooBAR</extcon:pw>
                     </extcon:authInfo>

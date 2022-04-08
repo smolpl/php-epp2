@@ -16,15 +16,15 @@ class ContactUpdateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <update>
-                  <contact:update xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+                  <contact:update xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
                     <contact:id>sh8013</contact:id>
                   </contact:update>
                 </update>
                 <extension>
-                  <extcon:update xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+                  <extcon:update xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
                     <extcon:individual>1</extcon:individual>
                   </extcon:update>
                 </extension>
@@ -43,15 +43,15 @@ class ContactUpdateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <update>
-                  <contact:update xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.0">
+                  <contact:update xmlns:contact="http://www.dns.pl/nask-epp-schema/contact-2.1">
                     <contact:id>sh8013</contact:id>
                   </contact:update>
                 </update>
                 <extension>
-                  <extcon:update xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.0">
+                  <extcon:update xmlns:extcon="http://www.dns.pl/nask-epp-schema/extcon-2.1">
                     <extcon:consentForPublishing>0</extcon:consentForPublishing>
                   </extcon:update>
                 </extension>

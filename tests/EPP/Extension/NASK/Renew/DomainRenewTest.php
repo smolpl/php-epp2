@@ -18,17 +18,17 @@ class DomainRenewTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <renew>
-                  <domain:renew xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.0">
+                  <domain:renew xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.1">
                     <domain:name>' . TEST_DOMAIN . '</domain:name>
                     <domain:curExpDate>2017-04-25</domain:curExpDate>
                     <domain:period unit="y">1</domain:period>
                   </domain:renew>
                 </renew>
                 <extension>
-                  <extdom:renew xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.0">
+                  <extdom:renew xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.1">
                     <extdom:reactivate/>
                   </extdom:renew>
                 </extension>
@@ -48,16 +48,16 @@ class DomainRenewTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <renew>
-                  <domain:renew xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.0">
+                  <domain:renew xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.1">
                     <domain:name>' . TEST_DOMAIN . '</domain:name>
                     <domain:curExpDate>2012-09-15</domain:curExpDate>
                   </domain:renew>
                 </renew>
                 <extension>
-                  <extdom:renew xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.0">
+                  <extdom:renew xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.1">
                     <extdom:renewToDate>2012-09-25</extdom:renewToDate >
                   </extdom:renew>
                 </extension>

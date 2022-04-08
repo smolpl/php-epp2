@@ -19,10 +19,10 @@ class FutureCreateTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <create>
-                  <future:create xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:create xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                     <future:period unit="y">3</future:period>
                     <future:registrant>nsk1234</future:registrant>

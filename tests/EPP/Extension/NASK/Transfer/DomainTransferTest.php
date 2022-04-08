@@ -18,10 +18,10 @@ class DomainTransferTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <transfer op="request">
-                  <domain:transfer xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.0">
+                  <domain:transfer xmlns:domain="http://www.dns.pl/nask-epp-schema/domain-2.1">
                     <domain:name>' . TEST_DOMAIN . '</domain:name>
                     <domain:authInfo>
                       <domain:pw>password</domain:pw>
@@ -29,7 +29,7 @@ class DomainTransferTest extends TestCase
                   </domain:transfer>
                 </transfer>
                 <extension>
-                  <extdom:transfer xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.0">
+                  <extdom:transfer xmlns:extdom="http://www.dns.pl/nask-epp-schema/extdom-2.1">
                     <extdom:resendConfirmationRequest/>
                   </extdom:transfer>
                 </extension>

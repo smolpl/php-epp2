@@ -11,7 +11,7 @@ class Future extends TransferCommand implements ExtensionInterface
 {
     protected $extension = 'extfut';
 
-    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extfut-2.0';
+    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extfut-2.1';
 
     public function getExtensionNamespace()
     {

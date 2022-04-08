@@ -11,7 +11,7 @@ class Report extends Extension implements ExtensionInterface
     protected $command = 'report';
     protected $mapping = 'extreport';
     protected $extension = 'extreport';
-    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extreport-2.0';
+    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extreport-2.1';
 
     public function setOffset($offset)
     {

@@ -16,10 +16,10 @@ class FutureDeleteTest extends TestCase
 
         $this->assertXmlStringEqualsXmlString(
             '<?xml version="1.0" encoding="UTF-8"?>
-            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.0">
+            <epp xmlns="http://www.dns.pl/nask-epp-schema/epp-2.1">
               <command>
                 <delete>
-                  <future:delete xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.0">
+                  <future:delete xmlns:future="http://www.dns.pl/nask-epp-schema/future-2.1">
                     <future:name>' . TEST_DOMAIN . '</future:name>
                   </future:delete>
                 </delete>

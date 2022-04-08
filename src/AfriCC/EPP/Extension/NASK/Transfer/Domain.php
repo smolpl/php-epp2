@@ -8,7 +8,7 @@ use AfriCC\EPP\Frame\Command\Transfer\Domain as DomainTransfer;
 class Domain extends DomainTransfer implements Extension
 {
     protected $extension = 'extdom';
-    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extdom-2.0';
+    protected $extension_xmlns = 'http://www.dns.pl/nask-epp-schema/extdom-2.1';
 
     /**
      * Add resend confirmation request
