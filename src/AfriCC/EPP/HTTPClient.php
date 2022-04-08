@@ -3,6 +3,7 @@
 namespace AfriCC\EPP;
 
 use AfriCC\EPP\Frame\Command\Logout as LogoutCommand;
+use AfriCC\EPP\Frame\Response\Greeting;
 
 /**
  * A high level HTTP(S) based client for the Extensible Provisioning Protocol (EPP)
@@ -109,6 +110,7 @@ class HTTPClient extends AbstractClient implements ClientInterface
      * Open a new connection to the EPP server
      *
      * @param bool|string $newPassword String with new password to set upon login, false if no password
+     * @return Greeting Greeting response.
      */
     public function connect($newPassword = false)
     {

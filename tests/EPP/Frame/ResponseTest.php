@@ -2,6 +2,7 @@
 
 namespace AfriCC\Tests\EPP\Frame;
 
+use AfriCC\EPP\Frame\Response\Greeting;
 use AfriCC\EPP\Frame\Response\MessageQueue;
 use AfriCC\EPP\Frame\ResponseFactory;
 use PHPUnit\Framework\TestCase;
@@ -258,5 +259,50 @@ invalid_request
         $response = ResponseFactory::build($empty_epp);
 
         $this->assertEquals($response, $empty_epp);
+    }
+
+    public function testGreeting()
+    {
+        $response = ResponseFactory::build(
+            '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <epp xmlns="urn:ietf:params:xml:ns:epp-1.0">
+                <greeting>
+                    <svID>EPP Registry</svID>
+                    <svDate>2020-04-20T11:05:49.496Z</svDate>
+                    <svcMenu>
+                        <version>1.0</version>
+                        <lang>en</lang>
+                        <lang>pl</lang>
+                        <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>
+                        <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>
+                        <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>
+                        <svcExtension>
+                            <extURI>urn:ietf:params:xml:ns:extcon-1.0</extURI>
+                            <extURI>urn:ietf:params:xml:ns:extdom-1.0</extURI>
+                        </svcExtension>
+                    </svcMenu>
+                </greeting>
+            </epp>
+            '
+        );
+
+        $this->assertInstanceOf(Greeting::class, $response);
+        $this->assertEquals('EPP Registry', $response->serverId());
+        $this->assertEquals('2020-04-20T11:05:49.496Z', $response->serverDate());
+        $this->assertEquals([
+            'version' => ['1.0'],
+            'lang' => ['en', 'pl'],
+            'objURI' => [
+                'urn:ietf:params:xml:ns:contact-1.0',
+                'urn:ietf:params:xml:ns:host-1.0',
+                'urn:ietf:params:xml:ns:domain-1.0',
+            ],
+            'svcExtension' => [
+                'extURI' => [
+                    'urn:ietf:params:xml:ns:extcon-1.0',
+                    'urn:ietf:params:xml:ns:extdom-1.0',
+                ],
+            ],
+        ], $response->menu());
     }
 }

@@ -11,6 +11,7 @@
 
 namespace AfriCC\EPP\Frame;
 
+use AfriCC\EPP\Frame\Response\Greeting;
 use AfriCC\EPP\Frame\Response\MessageQueue;
 use AfriCC\EPP\ObjectSpec;
 use DOMDocument;
@@ -24,7 +25,7 @@ class ResponseFactory
      * @param string $buffer
      * @param ObjectSpec $objectSpec
      *
-     * @return string|\AfriCC\EPP\Frame\Response\MessageQueue|\AfriCC\EPP\Frame\Response
+     * @return string|MessageQueue|Response|Greeting
      */
     public static function build($buffer, ObjectSpec $objectSpec = null)
     {
@@ -68,6 +69,10 @@ class ResponseFactory
                 }
 
                 return new Response($xml, $objectSpec);
+            }
+
+            if ($frame_type === 'greeting') {
+                return new Greeting($xml, $objectSpec);
             }
         }
 
